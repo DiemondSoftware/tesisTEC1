@@ -1,0 +1,73 @@
+/* Estilo para la ventana modal */
+.modal {
+    display: none;
+    position: fixed;
+    place-content: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(18px);
+}
+
+/* Estilo para el contenido de la ventana modal */
+.modal-contenido {
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    padding: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Estilo para el botón de cierre */
+.cerrarModal {
+    color: rgb(55, 55, 55);
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.cerrarModal:hover,
+.cerrarModal:focus {
+    color: #fbfbfb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animación de desvanecimiento */
+.fade-in {
+    animation-name: fadeInOpacidad;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+.fade-out {
+    animation-name: fadeOutOpacidad;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacidad {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutOpacidad {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

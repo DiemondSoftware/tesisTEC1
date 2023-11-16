@@ -12,8 +12,8 @@
     overflow-x: hidden;
     text-align: center;
 
-
 }
+
 
 .chat-header {
     text-align: center;
@@ -21,11 +21,15 @@
 }
 
 .chat-log {
-    text-align: start;
     height: 300px;
     overflow-y: auto;
-    margin-bottom: 10px;
     overflow-x: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    
+
 }
 
 .chat-mensaje {
@@ -39,17 +43,16 @@
     line-height: 1.5;
 }
 
-.usuario-mensaje {
-    background-color: #f2f2f2;
-    color: #353535;
-    float: right;
-    margin-top: 10px;
+.user-mensaje {
+    background-color: #4CAF50;
+    color: white;
+    max-width: 75%;
+    align-self:flex-end; /* Añadido */
 }
 
 .bot-mensaje {
-    float: left;
     background-color: #f2f2f2;
-    color: black;
+    max-width: 75%;
     animation: typing 1s steps(10, end) forwards;
 }
 
@@ -104,18 +107,3 @@
     font-size: 16px;
     transition: 0.2s ease-in-out;
 }
-
-.chat-input button[type="submit"]:hover {
-    color: #282828;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-

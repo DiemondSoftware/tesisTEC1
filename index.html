@@ -18,23 +18,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css')}}">
 
     <title>Tesis</title>
-    
+
 </head>
 
 <body>
     <main>
         <section class="seccion1">
-                <div class="cajaTitulo">
-                    <h1>Elegí tu orientación</h1>
-                    <p class="descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt sit vero,
-                        incidunt at optio
-                        numquam?
-                        Laboriosam, quisquam sint. Dolorem quo atque voluptates modi cum nemo eius est accusantium magni
-                        excepturi?</p>
-                    <a id="realizarTest">Realizar test</a>
-                    <a id="verOrientaciones">Ver orientaciones</a>
+            <div class="cajaTitulo">
+                <h1>Elegí tu orientación</h1>
+                <p class="descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt sit vero,
+                    incidunt at optio
+                    numquam?
+                    Laboriosam, quisquam sint. Dolorem quo atque voluptates modi cum nemo eius est accusantium magni
+                    excepturi?</p>
+                <a id="realizarTest">Realizar test</a>
+                <a id="verOrientaciones">Ver orientaciones</a>
 
-                </div>
+            </div>
         </section>
         <section class="separador">
             <h2>Te presentamos nuestro chatbot interactivo</h2>
@@ -45,22 +45,18 @@
         </section>
 
         <section class="seccion2" id="seccion2">
-            <div class="chat-contenedor">
+            <div class="chat-contenedor" id="chatcontenedor">
                 <div class="chat-header">
                     <h1>Chatbot</h1>
                 </div>
-                <div class="chat-log">
-                    <ul id="chat-log">
-                        <form method="post" action="/">
-                            <li class="chat-mensaje bot-mensaje">Hola, ¿en qué puedo ayudarte?</li>
-                            <li class="chat-mensaje" name="chat-mensaje"></li>
-                        </form>
-                    </ul>
+                <div class="chat-log" id="chat-log">
+                    <div class="chat-mensaje bot-mensaje">Hola, ¿en qué puedo ayudarte?</div>
+
                 </div>
                 <div class="chat-input">
-                    <form id="chat-form">
-                        <input type="text" id="chat-input" placeholder="Preguntame lo que necesites...">
-                        <button type="submit">Enviar</button>
+                    <form id="chat-form" action="/" method="post">
+                        <input type="text" id="chat-input" placeholder="Escribe aquí...">
+                        <button type="submit" id="send-btn">Enviar</button>
                     </form>
                 </div>
             </div>
@@ -69,10 +65,9 @@
 
         <section class="separador">
             <h2>Todas las orientaciones disponibles</h2>
-            <p class="separador-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, numquam iusto
-                eos vitae ad recusandae
-                asperiores culpa libero, labore tenetur minus voluptatibus cupiditate qui blanditiis aspernatur unde
-                accusamus velit repellat.</p>
+            <p class="separador-texto">¿Qué te gusta hacer? ¿Qué temas te interesan? Nuestro servicio te va a responder
+                todas esas preguntas. Podés realizar nuestro test impulsado por IA o explorar nuest galería de
+                orientaciones ¡Descubrilo ahora!</p>
         </section>
         <section class="seccion3">
             <ul class="tarjetas">
@@ -80,9 +75,12 @@
                     <div class="img img-primera"></div>
                     <div class="tarjeta">
                         <h3>Química</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam earum aliquam eos et qui
-                            possimus, aperiam alias, doloribus necessitatibus tenetur sint a corporis officiis provident
-                            maxime veritatis maiores! Ratione, quas!</p>
+                        <p>En este campo los estudiantes aprenderán a realizar análisis químicos, diseñar y sintetizar
+                            compuestos así como también a investigar y resolver los problemas relacionados con la
+                            industria y la medicina.
+                            Los conocimientos adquiridos en esta orientación les permitirá contribuir al desarrollo de
+                            productos y procesos químicos sostenibles mejorando la calidad de vida de las personas y
+                            protegiendo el medioambiente.</p>
                         <button class="boton" video="https://www.youtube.com/embed/jfKfPfyJRdk?si=xiVNjoW_uKAikqkg">Ver
                             más</button>
                     </div>
@@ -91,9 +89,14 @@
                     <div class="img img-segunda"></div>
                     <div class="tarjeta">
                         <h3>Electromecánica</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, provident facere
-                            voluptas sunt saepe illo eligendi culpa ut dolorum quia dolores, doloribus magnam eius ab
-                            quaerat temporibus accusantium. Inventore, similique.</p>
+                        <p>Esta orientación combina el conocimiento de la mecánica con la electrónica formando
+                            profesionales capaces de diseñar , mantener sistemas y maquinarias automatizadas.
+                            Los estudiantes aprenderán sobre el control de motores, automatización industrial y procesos
+                            de producción.
+                            Si te interesa el funcionamiento y la optimización de sistemas mecánicos y electrónicos esta
+                            orientación te va preparar para enfrentar los desafíos de la industria y los procesos de
+                            producción automatizados.
+                        </p>
                         <button class="boton" video="https://www.youtube.com/embed/jfKfPfyJRdk?si=xiVNjoW_uKAikqkg">Ver
                             más</button>
                     </div>
@@ -102,9 +105,12 @@
                     <div class="img img-tercera"></div>
                     <div class="tarjeta">
                         <h3>Electrónica</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita quis commodi
-                            inventore! Consequuntur, laudantium at ex quasi ut deleniti blanditiis voluptate natus
-                            obcaecati, molestias reprehenderit ab ratione fugiat. Omnis.</p>
+                        <p>En esta orientación los estudiantes se van a centrar en el mundo de los circuitos,
+                            dispositivos electrónicos y sistemas de comunicación, van a aprender a diseñar, implementar
+                            y mantener equipos electrónicos desde pequeños dispositivos hasta sistemas complejos
+                            Si te atrae la tecnología, los dispositivos inteligentes y la electrónica aplicada, esta
+                            orientación te va brindar las habilidades y conocimientos para ser parte del avance
+                            tecnológico que impulsa nuestra sociedad.</p>
                         <button class="boton" video="https://www.youtube.com/embed/jfKfPfyJRdk?si=xiVNjoW_uKAikqkg">Ver
                             más</button>
                     </div>
@@ -113,9 +119,14 @@
                     <div class="img img-cuarta"></div>
                     <div class="tarjeta">
                         <h3>Programación</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci deserunt enim dolores
-                            corporis facere voluptatem porro illum nesciunt alias non dignissimos, quam, architecto
-                            autem, ut ullam magni. Sit, repellendus quibusdam?</p>
+                        <p>Esta orientación se enfoca en el desarrollo de software y la resolución de problemas mediante
+                            la lógica de programación.
+                            Los estudiantes aprenderán diferentes lenguajes de programación, así como el diseño y la
+                            implementación de algoritmos.
+                            Con estas habilidades podrán trabajar como desarrolladores de software, ingenieros de datos,
+                            analistas de sistemas y en áreas relacionadas con la inteligencia artificial y
+                            ciberseguridad.
+                        </p>
                         <button class="boton" video="https://www.youtube.com/embed/jfKfPfyJRdk?si=xiVNjoW_uKAikqkg">Ver
                             más</button>
                     </div>
@@ -130,7 +141,7 @@
         </section>
 
         <footer>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Desarrollado por Samira Cortell y Nancy Chabarria.</p>
             <div class="footer-derecha">
                 <div class="footer-redes-iconos">
                     <div class="redes-iconos">
@@ -149,5 +160,7 @@
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <script src="./static/js/modal.js"></script>
 <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+<script src="./static/js/chatbpt.js"></script>
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
 
 </html>
